@@ -1,7 +1,10 @@
+import boto3
+import os
+import sys
+import uuid
+from urllib.parse import unquote_plus
 import pandas as pd
 def lambda_handler(event, context):
-    data={'a1':[1,2,3],'b1':[4,5,6]}
-    df=pd.DataFrame(data)
-    print("lambda successful")
-    print(data)
-
+  data={'a':[1,2,3],'b':[4,5,6]}
+  df=pd.DataFrame(data)
+  print(df)
