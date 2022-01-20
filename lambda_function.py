@@ -25,7 +25,7 @@ def write_dataframe_to_csv_on_s3(dataframe, filename, bucket):
 
 
 def lambda_handler(event, context):
-    try:
+
         # Get variables from event
         BUCKET = event.get('bucket')
         KEY = event.get('file_key')
@@ -52,7 +52,3 @@ def lambda_handler(event, context):
         return {
             'statusCode': 200,
             'message': 'Success!'}
-    except:
-        return {
-            'statusCode': 400,
-            'body': 'Error, bad request!'}
